@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>循环项目列表</title>
+</head>
+<body>
+    <div id="app-4">
+        <ol>
+            <li v-for="todo in todos">
+                {{ todo.text }}
+            </li>
+        </ol>
+    </div>
+</body>
+<script>
+    <!--在控制台中输入app4.todos.push({ text: '新项目' })，可以添加数据-->
+    var app4 = new Vue({
+        el: '#app-4',
+        data: {
+            todos: [
+                { text: '学习 JavaScript' },
+                { text: '学习 Vue' },
+                { text: '整个牛项目' }
+            ]
+        }
+    })
+</script>
+</html>
